@@ -1295,10 +1295,14 @@ static void gesture_judge(struct synaptics_ts_data *ts)
 
 // carlo@oneplus.net 2015-05-25, begin.
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 #ifndef WAKE_GESTURES
 >>>>>>> a33f7db626d9... OnePlus5: Wake gestures: sweep2wake and doubletap2wake
+=======
+/*
+>>>>>>> fcd4c34... synaptics_driver_s3320: fix gestures not working
 	keyCode = UnkownGestrue;
 	// Get key code based on registered gesture.
 	switch (gesture) {
