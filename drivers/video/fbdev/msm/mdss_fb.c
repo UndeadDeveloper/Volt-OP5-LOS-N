@@ -700,6 +700,10 @@ static ssize_t mdss_fb_force_panel_dead(struct device *dev,
 		return len;
 	}
 
+<<<<<<< HEAD
+=======
+//#endif
+>>>>>>> abd0874... mdss: set power saving panel options
 	if (kstrtouint(buf, 0, &pdata->panel_info.panel_force_dead))
 		pr_err("kstrtouint buf error!\n");
 
@@ -2020,6 +2024,10 @@ static int mdss_fb_blank_unblank(struct msm_fb_data_type *mfd)
 	}
 
 error:
+<<<<<<< HEAD
+=======
+//#endif
+>>>>>>> abd0874... mdss: set power saving panel options
 	return ret;
 }
 
@@ -3764,6 +3772,10 @@ static int __mdss_fb_perform_commit(struct msm_fb_data_type *mfd)
 	}
 
 skip_commit:
+<<<<<<< HEAD
+=======
+//#endif
+>>>>>>> abd0874... mdss: set power saving panel options
 	if (!ret)
 		mdss_fb_update_backlight(mfd);
 

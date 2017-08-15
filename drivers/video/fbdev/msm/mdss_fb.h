@@ -372,6 +372,10 @@ struct msm_fb_data_type {
 	bool pending_switch;
 	struct mutex switch_lock;
 	struct input_handler *input_handler;
+<<<<<<< HEAD
+=======
+//#endif
+>>>>>>> abd0874... mdss: set power saving panel options
 };
 
 static inline void mdss_fb_update_notify_update(struct msm_fb_data_type *mfd)
