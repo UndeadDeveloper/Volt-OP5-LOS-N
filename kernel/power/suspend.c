@@ -34,6 +34,7 @@
 
 #include "power.h"
 
+<<<<<<< HEAD
 #ifdef CONFIG_VENDOR_ONEPLUS
 #include <linux/gpio.h>
 
@@ -41,6 +42,8 @@ extern int slst_gpio_base_id;
 #define PROC_AWAKE_ID 12 /* 12th bit */
 #endif
 
+=======
+>>>>>>> 1f11535... power: suspend: remove OP fuckery, QC's sleepstate driver already deals with this
 extern bool need_show_pinctrl_irq;
 const char *pm_labels[] = { "mem", "standby", "freeze", NULL };
 const char *pm_states[PM_SUSPEND_MAX];
@@ -580,6 +583,7 @@ int pm_suspend(suspend_state_t state)
 
 	pm_suspend_marker("entry");
 
+<<<<<<< HEAD
 #ifdef CONFIG_VENDOR_ONEPLUS
     gpio_set_value(slst_gpio_base_id + PROC_AWAKE_ID, 0);
 #endif
@@ -587,6 +591,9 @@ int pm_suspend(suspend_state_t state)
 #ifdef VENDOR_EDIT
     gpio_set_value(slst_gpio_base_id + PROC_AWAKE_ID, 1);
 #endif
+=======
+	error = enter_state(state);
+>>>>>>> 1f11535... power: suspend: remove OP fuckery, QC's sleepstate driver already deals with this
 
 	if (error) {
 		suspend_stats.fail++;
